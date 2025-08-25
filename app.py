@@ -8,6 +8,10 @@ app = Flask(__name__)
 api = Api(app)
 swagger = Swagger(app)
 
+@app.route('/')
+def home():
+    return "<h1 style='text-align: center'>Book review's API.</h1>"
+
 class UppercaseText(Resource):
     def get(self):
         """
